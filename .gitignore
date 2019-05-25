@@ -1,0 +1,7 @@
+js/p5.dom.js
+*.aux*
+*.un~*
+*.swp*
+*.out
+*.log*
+*~*

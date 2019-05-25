@@ -1,0 +1,15 @@
+.outer{
+    display:flex;
+    align-items:center;
+    height:100%;
+    position:fixed;
+}
+.inner{
+    width:100%;
+    text-align:center
+}
+.content{
+    display:inline-block;
+    padding:20px
+}
+ 
