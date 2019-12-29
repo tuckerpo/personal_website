@@ -77,21 +77,9 @@
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\href{http://buffalo.edu/~tuckerpo}{\Large Tucker J. Polomik}} & GitHub: \href{https://github.com/tuckerpo}{https://github.com/tuckerpo}\\
   Email: \href{mailto:tuckerpo@buffalo.edu}{tuckerpo@buffalo.edu} & LinkedIn: \href{https://linkedin.com/in/tuckerpo}{https://linkedin.com/in/tuckerpo}\\
-  Phone: (845) 381-8007 & Personal Site: \href{http://buffalo.edu/~tuckerpo}{http://buffalo.edu/$\sim$tuckerpo}
+  Phone: (845) 381-8007 & Personal Site: \href{https://tuckerpo.github.io}{https://tuckerpo.github.io}
  
 \end{tabular*}
-
-
-%-----------EDUCATION-----------------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {University at Buffalo, School of Engineering}{Buffalo, NY}
-      {Bachelor of Science, Computer Engineering}{Sept 2018}
-  \resumeSubHeadingListEnd
-  
-
-
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
@@ -100,48 +88,29 @@
   
   \resumeSubheading{INFICON}{Syracuse, NY}{\textbf{R\&D Software Engineer}}{October 2018 - Present}
   		\resumeItemListStart
-  			\resumeItem{R\&D}{Software Engineer working as part of a multidisciplinary, cross-functional team doing R\&D work in the areas of gas chromatography, mass spectrometry, thin film deposition and vacuum leak detection.}
-			\vspace{1.5mm}
-  			\resumeItem{Project Aruba}{One of three engineers driving a major software update for our gas chromatography instrument. Responsible for writing the post-processing events that allowed instrument users to clean up chromatography errors due to electrical noise and external artifacts. Done in Python, JavaScript, and Bash.}
-			\vspace{1.5mm}
-  			\resumeItem{Web Interface}{Built a web interface on top of our in-house chromatography synthesis engine. Allowed chemists to remotely run chromatogram scenarios with varying noise profiles to determine problem areas in our instruments. Python, JavaScript, HTML5.}
-			\vspace{1.5mm}
-  			\resumeItem{GC/MS}{Work with a team developing a new combined gas chromatography/mass spectrometry instrument, NextGen HAPSITE, a modern replacement for INFICON's highest revenue stream product. Maintained 90\%+ code coverage with GoogleTest. C++11, Bash.}
-			\vspace{1.5mm}
+  			\resumeItem{R\&D}{Software Engineer working as part of a multidisciplinary, agile cross-functional team doing R\&D work in the areas of gas chromatography, mass spectrometry, thin film deposition and vacuum leak detection.}
+  			\resumeItem{Software Engineer}{Full-stack responsibilities ranging from front-end web development to bare-metal assembly code, and everything in between. Custom Linux kernel modules, board bring-up, multi-threaded application level programs, custom network layers on top of TCP/IP, FPGA interfacing, and circuit design \& debugging.}
+  			\resumeItem{Data Processing}{Responsible for implementing user-configurable post-processing events on the Flask back-end of one of our instruments. Allows end-users to modify erroneous chromatography results through a web interface.}
+  			\resumeItem{FPGA Registers Over HTTP}{Expose FPGA registers as dynamic REST endpoints on a cpprestsdk web server for rapid debugging. Removed the need for bloated FPGA tooling software/hardware. FPGA memory map addressable by URI of GET/PUT/POST requests.}
+  			\resumeItem{Linux Device Drivers}{Wrote a char device kernel module to deprecate ISA DMA functionality as an electrometer data pipe in a GC/MS, allowing INFICON to avoid buying a price-gouged legacy board, saving the company upwards of \$750,000. This earned me the nickname "Million Buck Tuck".}
+  			\resumeItem{Project Planning}{Participate in various stages of project planning including voice of customer, requirements drafting, phase-gate work breakdown and FMEAs.}
   		\resumeItemListEnd
   		
   \resumeSubheading
   {KGB AVIATION SOLUTIONS, LLC.}{West Seneca, NY}
-  {\textbf{Capstone Project - Student Engineer}}{January 2018 - May 2018}
+  {\textbf{Student Embedded Engineer}}{January 2018 - May 2018}
   \resumeItemListStart
 
   	 \resumeItem{FDR Interfacing Tool}{Worked with the company CEO and several other interns to build an interfacing system for flight data recorders (FDRs). }
-			\vspace{1.5mm}
 	  \resumeItem{Reverse Engineering}
-  		{Determined the proprietary handshaking protocol \& RS-422 signal timing patterns of FDRs. }
-			\vspace{1.5mm}
-	   \resumeItem{Analog Tooling}{Used a Tek oscilloscope and Digilent bus analyzer to determine character encoding, start-stop, parity and baud rate of serial streams.}
-			\vspace{1.5mm}
+  		{Determined the proprietary handshaking protocol \& RS-422 signal timing patterns of FDRs by sniffing the 422 bus. }
+	   \resumeItem{FTDI}{Wrote a multi-threaded Python script which used pylibftdi to mock the hand-shaking signals expected by the flight data recorders to extract data from them, while updating a GUI on a MIPI display concurrently.}
 	   \iffalse
 	  \resumeItem{Data Download}{Wrote a Python script which pulls data from the FDR and stores it to removable, non-volatile flash memory.}
 	  \fi
 	  \resumeItem{Shipped Product}{Managed to take an idea from the planning stages and progress to a tangible, secure, shippable embedded system in four months time.}
-			\vspace{1.5mm}
   \resumeItemListEnd
   
-
-
-\iffalse
-	\resumeSubheading
-	{WNY Food Web}{Buffalo, NY}
-	{\textbf{Volunteer Software Developer}}{June 2017 - July 2017}
-	\resumeItemListStart
-	\resumeItem{Poverty Relief}
-	{Wrote code to interact with user and database in Typescript \& SQL. }
-	\resumeItemListEnd
-	  \vspace{1.5mm}
-\fi
-
 % -- Not so sure I need my grocery store experience any longer...
 \iffalse
 \resumeSubheading
@@ -157,40 +126,44 @@
 
 \resumeSubHeadingListEnd  % -- END WORK EXPERIENCES
 
+
+
+
+
   
  %-----------PROJECTS-----------------
 \section{Personal Projects}
 \resumeSubHeadingListStart
-\resumeSubItem{InMoov Robotics Simulation}
-{Worked on a team of 6 to create a bipedal motion simulator for an open-source CAD tool called "Choreonoid". Wrote C++ code that models bipedal kinematics and Python scripts that automate animations. Followed the agile software development pattern with bi-weekly sprints.} \vspace{1.5mm}
-\resumeSubItem{Carduino (Autonomous RC vehicle)}
+\resumeSubItem{Chip8}
+{Wrote an interpreter for the Chip8 language. Capable of playing Chip8 ROMs. C++, SDL2.} \vspace{1.5mm}
+\resumeSubItem{Pongloader}{x86 assembly pong game that fits in a legacy boot sector.}
+\vspace{1.5mm}
+\iffalse
+\resumeSubItem{Carduino}
 {Write C code on an ATmega328P chip that controls servos and motors on an RC vehicle. Concurrently parse data from an ultrasonic sensor to calculate the vehicle's distance to things around it, changing the angle of the servos to avoid collisions accordingly. }\vspace{1.5mm}
+\fi
 \iffalse
 \resumeSubItem{I'm Hungry}
 {Full-stack developer for a Node.js Yelp clone. Integrated back-end and database MySQL functionality with AWS. Wrote registration, log-in, and session storing modules; regularly back-up database. }\vspace{1.5mm}
 \fi
-\resumeSubItem{RTCV}{Platform-independent real-time computer vision project. Accesses a system's webcam and allows the user to apply various image filters and segmentations in real-time with minimal FPS loss. Written in Python.}
-\resumeSubItem{MicroSpaceInvaders}{ASCII rendition of the 1978 arcade game written in ARM7 assembly language and C. Developed on bare-metal NXP LPC213x series of ARM microprocessor boards over JTAG.}
-
-\iffalse
-\resumeSubItem{CppNews}{Used the Twitter open API with Python library Tweepy to make a data-scraping bot. Retweets things related to the C++ language if it's deemed popular by internal API data (number of likes relative to followers, follower engagement, etc).}
-\fi
+\resumeSubItem{MicroSpaceInvaders}{ASCII rendition of the 1978 arcade game written in ARM7 assembly language and C. Developed on bare-metal NXP LPC213x series of ARM microprocessor boards. Programmed and debugged over J-link JTAG.}
 
 \resumeSubHeadingListEnd
 
-
 %
 %--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
+\section{Programming \& Tooling}
  \resumeSubHeadingListStart
    \item{
-     \textbf{Languages}{: C++, C, Python, Java, Bash, asm (ARM, MIPS)} }
+     \textbf{Languages}{: C++, C, Python, JavaScript, VHDL, x86 and ARM assembly.} }
      \hfill
      \item{
-      \textbf{Tools \& Frameworks}{: GNU Toolchain, GoogleTest, PyTest, JIRA, \LaTeX, git
+      \textbf{Tools \& Frameworks}{: GNU Toolchain, CMake, git, Yocto
    } 
 \item{
-	\textbf{OS/Platforms}{: Linux, Windows} }
+	\textbf{OS/Platforms}{: Linux, Windows, FreeRTOS, Bare-metal.} }
+\item {
+	\textbf{Hardware}{: Comfortable reading schematics \& using oscilloscopes, logic analyzers, multi-meters, etc.}}
 
 % -- Don't need notable courses past first job. Keep in case.
 \iffalse
@@ -198,6 +171,18 @@
 \fi
 } 
  \resumeSubHeadingListEnd
+ 
+ %-----------EDUCATION-----------------
+ \section{Education}
+ \resumeSubHeadingListStart
+ \resumeSubheading
+ {University at Buffalo, School of Engineering}{Buffalo, NY}
+ {Bachelor of Science, Computer Engineering}{Awarded September 2018}
+  \resumeSubheading
+ {Linux Foundation}{Syracuse, NY}
+ {Linux Foundation Certified Engineer - Linux Kernel Internals}{Awarded December 2019}
+ \resumeSubHeadingListEnd
+ 
  
 
 
