@@ -24,6 +24,7 @@ h1{
     font-size:45px
 }
 h3{
+    vertical-align: text-top;
     font-size:25px;
     font-family:Inconsolata,monospace
 }
