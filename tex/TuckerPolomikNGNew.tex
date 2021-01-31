@@ -75,9 +75,9 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://buffalo.edu/~tuckerpo}{\Large Tucker J. Polomik}} & GitHub: \href{https://github.com/tuckerpo}{https://github.com/tuckerpo}\\
+  \textbf{\href{https://tuckerpo.xyz}{\Large Tucker J. Polomik}} & GitHub: \href{https://github.com/tuckerpo}{https://github.com/tuckerpo}\\
   Email: \href{mailto:tuckerpo@buffalo.edu}{tuckerpo@buffalo.edu} & LinkedIn: \href{https://linkedin.com/in/tuckerpo}{https://linkedin.com/in/tuckerpo}\\
-  Phone: (845) 381-8007 & Personal Site: \href{https://tuckerpo.github.io}{https://tuckerpo.github.io}
+  Phone: (845) 381-8007 & Personal Site: \href{https://tuckerpo.xyz}{https://tuckerpo.xyz}
  
 \end{tabular*}
 
@@ -86,14 +86,18 @@
   \resumeSubHeadingListStart
   
   
-  \resumeSubheading{INFICON}{Syracuse, NY}{\textbf{R\&D Software Engineer}}{October 2018 - Present}
+  \resumeSubheading{INFICON}{Syracuse, NY}{\textbf{Software Engineer}}{October 2018 - Present}
   		\resumeItemListStart
-  			\resumeItem{R\&D}{Software Engineer working as part of a multidisciplinary, agile cross-functional team doing R\&D work in the areas of gas chromatography, mass spectrometry, thin film deposition and vacuum leak detection.}
-  			\resumeItem{Software Engineer}{Full-stack responsibilities ranging from front-end web development to bare-metal assembly code, and everything in between. Custom Linux kernel modules, board bring-up, multi-threaded application level programs, custom network layers on top of TCP/IP, FPGA interfacing, and circuit design \& debugging.}
-  			\resumeItem{Data Processing}{Responsible for implementing user-configurable post-processing events on the Flask back-end of one of our instruments. Allows end-users to modify erroneous chromatography results through a web interface.}
-  			\resumeItem{FPGA Registers Over HTTP}{Expose FPGA registers as dynamic REST endpoints on a cpprestsdk web server for rapid debugging. Removed the need for bloated FPGA tooling software/hardware. FPGA memory map addressable by URI of GET/PUT/POST requests.}
-  			\resumeItem{Linux Device Drivers}{Wrote a char device kernel module to deprecate ISA DMA functionality as an electrometer data pipe in a GC/MS, allowing INFICON to avoid buying a price-gouged legacy board, saving the company upwards of \$750,000. This earned me the nickname "Million Buck Tuck".}
-  			\resumeItem{Project Planning}{Participate in various stages of project planning including voice of customer, requirements drafting, phase-gate work breakdown and FMEAs.}
+  			\resumeItem{Full Stack}{Full-stack responsibilities ranging from front-end web development to bare-metal assembly code, and everything in between.  Custom Linux kernel modules, board bring-up, multi-threaded application level programs,custom network layers on top of TCP/IP, and FPGA interfacing.}
+  			\resumeItem{Kernel TTY Line Discipline}{ Implemented a TTY line discipline kernel-mode driver, allowing a custom serial protocol to be used over any TTY. C, Linux.}
+  			\resumeItem{Kernel Char Device Driver}{ Implemented a kernel-mode char driver for communication to a DSP chip memory mapped to the kernel through an FPGA. C, Linux.}
+  			\resumeItem{FPGA Memory Map over HTTP}{Write web server that exposes FPGA's memory map as addressable over HTTP. C++, Linux}
+  			\resumeItem{FPGA Programming Library}{ Wrote a platform agnostic library for programming Intel and Xilinx FPGAs over USB by bit-banging the FPGA bitstream image over the FPGA’s passive serial interface.  C++, Linux, Windows, LibUSB, LibFTDI.}
+  			\resumeItem{Legacy Porting}{Lead a successful effort to port a 650kLOC project from C++98 to C++17.}
+  			\resumeItem{GUI Programming}{Wrote customer-facing and internal tooling GUIs using a variety of different technologies. Electron (JS, HTML, CSS), wxWidgets (C++, Python), .NET WPF (C\#).}
+  			\resumeItem{Yocto}{Wrote Yocto BSPs and recipes for embedded Linux deployments on x86 and ARM boards.}
+  			\resumeItem{Technical Screening}{Responsible for technical screenings for potential software \& embedded engineer hires.}
+  			\resumeItem{Intern Mentor}{ Serve as a mentor for summer software engineering interns.}
   		\resumeItemListEnd
   		
   \resumeSubheading
@@ -102,9 +106,8 @@
   \resumeItemListStart
 
   	 \resumeItem{FDR Interfacing Tool}{Worked with the company CEO and several other interns to build an interfacing system for flight data recorders (FDRs). }
-	  \resumeItem{Reverse Engineering}
-  		{Determined the proprietary handshaking protocol \& RS-422 signal timing patterns of FDRs by sniffing the 422 bus. }
-	   \resumeItem{FTDI}{Wrote a multi-threaded Python script which used pylibftdi to mock the hand-shaking signals expected by the flight data recorders to extract data from them, while updating a GUI on a MIPI display concurrently.}
+	  \resumeItem{Reverse Engineering}{Sniffed an RS-422 bus to determine propriety hand-shaking serial packets.}
+	   \resumeItem{FTDI}{Interfaced to a FTDI USB to serial chip from a Pine64 SBC to mock hand-shaking signals to flight data recorders, allowing data extraction.  Concurrently update a GUI over MIPI DSI.}
 	   \iffalse
 	  \resumeItem{Data Download}{Wrote a Python script which pulls data from the FDR and stores it to removable, non-volatile flash memory.}
 	  \fi
@@ -130,7 +133,7 @@
 
 
 
-  
+\iffalse
  %-----------PROJECTS-----------------
 \section{Personal Projects}
 \resumeSubHeadingListStart
@@ -147,8 +150,8 @@
 {Full-stack developer for a Node.js Yelp clone. Integrated back-end and database MySQL functionality with AWS. Wrote registration, log-in, and session storing modules; regularly back-up database. }\vspace{1.5mm}
 \fi
 \resumeSubItem{MicroSpaceInvaders}{ASCII rendition of the 1978 arcade game written in ARM7 assembly language and C. Developed on bare-metal NXP LPC213x series of ARM microprocessor boards. Programmed and debugged over J-link JTAG.}
-
 \resumeSubHeadingListEnd
+\fi
 
 %
 %--------PROGRAMMING SKILLS------------
@@ -158,7 +161,7 @@
      \textbf{Languages}{: C++, C, Python, JavaScript, VHDL, x86 and ARM assembly.} }
      \hfill
      \item{
-      \textbf{Tools \& Frameworks}{: GNU Toolchain, CMake, git, Yocto
+      \textbf{Tools \& Frameworks}{: GNU tools, CMake, git, Yocto, Visual Studio, Atmel Studio, Vivado, Jenkins
    } 
 \item{
 	\textbf{OS/Platforms}{: Linux, Windows, FreeRTOS, Bare-metal.} }
